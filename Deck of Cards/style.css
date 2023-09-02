@@ -1,0 +1,51 @@
+body {
+    text-align: center;
+    background-color: black;
+}
+
+button {
+    position: relative;
+    background-color: white;
+    border: none;
+    font-size: 20px;
+    color: black;
+    padding: 20px;
+    width: 200px;
+    text-align: center;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    text-decoration: none;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+button:after {
+    content: "";
+    background: grey;
+    display: block;
+    position: absolute;
+    padding-top: 300%;
+    padding-left: 350%;
+    margin-left: -20px!important;
+    margin-top: -120%;
+    opacity: 0;
+    transition: all 0.8s
+}
+
+button:active:after {
+    padding: 0;
+    margin: 0;
+    opacity: 1;
+    transition: 0s
+}
+
+#card-area {
+    margin-top: 50px;
+}
+
+#card-area > img {
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
